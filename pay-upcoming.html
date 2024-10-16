@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay</title>
+    <link rel="stylesheet" href="styles.css">
+	<script src="More-Tab.js"></script>
+	<script src="pay-all.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="logo">
+            <img src="Farm Cove Horizontal Logo.png" alt="Farm Cove Logo"> <!-- Placeholder for the logo -->
+        </div>
+        <div class="nav-icons">
+            <img src="magnifying glass.png" alt="Search" class="icon">
+            <img src="bell.png" alt="Notifications" class="icon">
+            <img src="avatar.png" alt="User" class="icon">
+        </div>
+    </div>
+
+    <!-- Hidden Menu for Mobile View -->
+    <div class="tabs">
+        <a href="index.html">Home</a>
+        <a href="approvals.html">Approvals</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="film-details.html">Film Details</a>
+        <a href="reporting.html">Reports</a>
+        <a href="schedule-payment.html">Schedule Payment</a>
+        <a href="pay.html" class="active">Pay</a>
+		
+		<!-- More Button -->
+		<div class="more">
+			More
+			<div class="more-dropdown"></div>
+		</div>
+		
+		
+    </div>
+	
+    <div class="tabs2">
+        <a href="pay.html">To Pay</a>
+        <a href="pay-upcoming.html" class="active">Upcoming Payments</a>
+    </div>
+
+    <!-- Page Header -->
+    <div class="header">
+        <h1>Upcoming Payments</h1>
+    </div>
+
+    <!-- Pay All Switch -->
+    <div class="pay-all-container" style="text-align: center; margin-bottom: 10px;">
+        <span class="pay-all-label">Pay all</span>
+        <label class="switch">
+            <input type="checkbox" onchange="toggleAll(this)">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <!-- Table for Payments -->
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Ref.</th>
+                    <th>Amount</th>
+                    <th>Sch. Payment Date</th>
+                    <th>Paying</th>
+                    <th>Bank Payee Name</th>
+                    <th>Bank Name</th>
+                    <th>Bank Account Number</th>
+                    <th>Bank Sort Code</th>
+                    <th>Pay?</th>
+                    <th>Pay Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="row1">
+                    <td>PAY-001</td>
+                    <td>£2,333.98</td>
+                    <td>03/10/24</td>
+                    <td>12 September Studio Limited - Costume</td>
+                    <td>Bollywood Ltd</td>
+                    <td>Chase Bank</td>
+                    <td>12345678</td>
+                    <td>20-30-40</td>
+                    <td>
+                        <label class="switch">
+                            <input type="checkbox" class="pay-switch-input" onchange="toggleInputs(this, 'row1')">
+                            <span class="slider round"></span>
+                        </label>
+                    </td>
+                    <td class="date-cell"></td>
+                </tr>
+                <tr id="row2">
+                    <td>PAY-002</td>
+                    <td>£4,280.00</td>
+                    <td>04/10/24</td>
+                    <td>12 September Studio Limited - Costume</td>
+                    <td>Bollywood Ltd</td>
+                    <td>Chase Bank</td>
+                    <td>87654321</td>
+                    <td>30-40-50</td>
+                    <td>
+                        <label class="switch">
+                            <input type="checkbox" class="pay-switch-input" onchange="toggleInputs(this, 'row2')">
+                            <span class="slider round"></span>
+                        </label>
+                    </td>
+                    <td class="date-cell"></td>
+                </tr>
+                <tr id="row3">
+                    <td>PAY-003</td>
+                    <td>£3,600.98</td>
+                    <td>05/10/24</td>
+                    <td>12 September Studio Limited - Costume</td>
+                    <td>Bollywood Ltd</td>
+                    <td>Chase Bank</td>
+                    <td>65432189</td>
+                    <td>40-50-60</td>
+                    <td>
+                        <label class="switch">
+                            <input type="checkbox" class="pay-switch-input" onchange="toggleInputs(this, 'row3')">
+                            <span class="slider round"></span>
+                        </label>
+                    </td>
+                    <td class="date-cell"></td>
+                </tr>
+                <tr id="row4">
+                    <td>PAY-004</td>
+                    <td>£6,533.98</td>
+                    <td>06/10/24</td>
+                    <td>12 September Studio Limited - Costume</td>
+                    <td>Bollywood Ltd</td>
+                    <td>Chase Bank</td>
+                    <td>23456789</td>
+                    <td>50-60-70</td>
+                    <td>
+                        <label class="switch">
+                            <input type="checkbox" class="pay-switch-input" onchange="toggleInputs(this, 'row4')">
+                            <span class="slider round"></span>
+                        </label>
+                    </td>
+                    <td class="date-cell"></td>
+                </tr>
+                <tr id="row5">
+                    <td>PAY-005</td>
+                    <td>£9,876.45</td>
+                    <td>07/10/24</td>
+                    <td>12 September Studio Limited - Costume</td>
+                    <td>Bollywood Ltd</td>
+                    <td>Chase Bank</td>
+                    <td>43218765</td>
+                    <td>60-70-80</td>
+                    <td>
+                        <label class="switch">
+                            <input type="checkbox" class="pay-switch-input" onchange="toggleInputs(this, 'row5')">
+                            <span class="slider round"></span>
+                        </label>
+                    </td>
+                    <td class="date-cell"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
